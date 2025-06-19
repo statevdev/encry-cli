@@ -1,0 +1,13 @@
+AllCops:
+  NewCops: enable
+  Exclude:
+    - 'encry.gemspec'
+
+Style/StringLiterals:
+  EnforcedStyle: single_quotes
+
+Style/StringLiteralsInInterpolation:
+  EnforcedStyle: single_quotes
+
+Style/Documentation:
+  Enabled: false
