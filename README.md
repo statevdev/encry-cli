@@ -29,14 +29,14 @@ Passwords are not stored anywhere, that's why this is a **no-storage** password 
 
 You will be prompted for your main word (master password), and a site-specific password will be generated.
 
-Let's imagine a master word, for example -- `tirion`.
+Let's imagine a master word, for example – `tirion`.
 
 ```bash
 $ encry github
 Enter main word: tirion    (don't worry, its a hidden field so no one will see your word!)
 Copied!
 ```
-The password was generated and saved to the clipboard. Try pasting it somewhere with Ctrl + V (`r7DkrC8n32b2SZHK`). Now do the same thing again -- the result will be the same!
+The password was generated and saved to the clipboard. Try pasting it somewhere with Ctrl + V (`r7DkrC8n32b2SZHK`). Now do the same thing again – the result will be the same!
 
 ```bash
 $ encry
