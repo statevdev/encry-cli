@@ -1,13 +1,13 @@
 # Encry
 
-**Encry** is a no-storage deterministic password generator for the command line. It generates site-specific passwords using a master word and a site identifier, based on a KDF (PBKDF2) with user-configurable options.
+**Encry** is a deterministic password generator for the command line. It generates site-specific passwords using a master word and a site identifier, based on a KDF (PBKDF2) with user-configurable options.
 
 ## Installation
 
 Install from RubyGems:
 
 ```bash
-gem install encry
+$ gem install encry
 ```
 
 ## Usage
@@ -15,15 +15,47 @@ gem install encry
 Generate a password for a specific site:
 
 ```bash
-encry github
+$ encry github
 ```
+After that, “Copied!” will appear and the obtained password will be copied to the clipboard. Just press “Ctrl + V” in the desired password entry field on the site and you're done!
+
+## How does it work?
+
+You don't need to store your passwords anywhere, the result of each password is deterministic, i.e. unambiguously determined by the two words you enter before generating it, namely the master word and the site word. This means that if you enter the same master word and site word, you will ALWAYS get the same result. With this approach, the masterword is both a lock and a key. You don't need to remember a bunch of passwords, just remember the master word and add site-words to it, and you will generate complex secure passwords for each site.
+
+Passwords are not stored anywhere, that's why this is a **no-storage** password manager. You don't have to be afraid of losing access to your password manager, even if you are not at your computer, you can install this gem and access all your passwords, because in fact, they are all stored **in your head** :)
+
+## Examples
 
 You will be prompted for your main word (master password), and a site-specific password will be generated.
+
+Let's imagine a master word, for example -- `tirion`.
+
+```bash
+	$ encry github
+	Enter main word: tirion    (don't worry, its a hidden field so no one will see your word!)
+	Copied!
+```
+The password was generated and saved to the clipboard. Try pasting it somewhere with Ctrl + V (`r7DkrC8n32b2SZHK`). Now do the same thing again -- the result will be the same!
+
+```bash
+	$ encry
+	Enter site word: github
+	Enter main word: tirion    (don't worry, its a hidden field so no one will see your word!)
+	Copied!
+```
+
+```bash
+	$ encry --show
+	Enter site word: github
+	Enter main word: tirion    (don't worry, its a hidden field so no one will see your word!)
+	r7DkrC8n32b2SZHK
+```
 
 #### Common options
 
 ```bash
-encry github --length 20 --digest sha512 --iterations 200000
+$ encry github --length 20 --digest sha512 --iterations 200000
 ```
 
 #### All available options
