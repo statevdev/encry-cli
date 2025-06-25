@@ -60,34 +60,22 @@ $ encry github --length 20 --digest sha512 --iterations 200000
 
 #### All available options
 
-	--length N – Output password length (default: 16)
-
-	--iterations N – Number of KDF iterations (default: 100000)
-
-	--digest NAME – Digest algorithm (sha256, sha512, sha3-512, etc.)
-
-	--key-length N – Derived key length in bytes (default: 32)
-
-	--main WORD – Provide main word as plain text (insecure)
-
-	--env VAR – Read main word from environment variable
-
-	--stdin – Read main word from STDIN (default behavior)
-
-	--show – Show the password in the terminal instead of copying
-
-	--no-copy – Do not copy the password to the clipboard
-
-	--quiet – Suppress output
-
-	--debug – Print debug information
-
-	--list-digests – List supported digest algorithms
-
-	--version – Show version
-
-	--help – Show usage information
-
+|Option|Description|
+|------|-----------|
+|`--length N`|Output password length (default: 16)|
+|`--iterations N`|Number of KDF iterations (default: 100000)|
+|`--digest NAME`|Digest algorithm (sha256, sha512, sha3-512, etc.)|
+|`--key-length N`|Derived key length in bytes (default: 32)|
+|`--main WORD`|Provide main word as plain text (insecure)|
+|`--env VAR`|Read main word from environment variable|
+|`--stdin`|Read main word from STDIN (default behavior)|
+|`--show`|Show the password in the terminal instead of copying|
+|`--no-copy`|Do not copy the password to the clipboard|
+|`--quiet`|Suppress output|
+|`--debug`|Print debug information|
+|`--list-digests`|List supported digest algorithms|
+|`--version`|Show version|
+|`--help`|Show usage information|
 
 ## License
 
