@@ -33,7 +33,7 @@ Let's imagine a master word, for example – `tirion`.
 
 ```bash
 $ encry github
-Enter main word: tirion    (don't worry, its a hidden field so no one will see your word!)
+Enter main word: tirion    (hidden)
 Copied!
 ```
 The password was generated and saved to the clipboard. Try pasting it somewhere with Ctrl + V (`r7DkrC8n32b2SZHK`). Now do the same thing again – the result will be the same!
@@ -41,14 +41,14 @@ The password was generated and saved to the clipboard. Try pasting it somewhere 
 ```bash
 $ encry
 Enter site word: github
-Enter main word: tirion    (don't worry, its a hidden field so no one will see your word!)
+Enter main word: tirion    (hidden)
 Copied!
 ```
 
 ```bash
 $ encry --show
 Enter site word: github
-Enter main word: tirion    (don't worry, its a hidden field so no one will see your word!)
+Enter main word: tirion    (hidden)
 r7DkrC8n32b2SZHK
 ```
 
