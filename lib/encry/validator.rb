@@ -31,6 +31,7 @@ module Encry
       abort('Error: --key-length option must be greater than 0') if options[:key_length] <= 0
       abort('Error: --iterations option must be greater than 0') if options[:iterations] <= 0
       abort('Error: --length option must be greater than 0') if options[:length] <= 0
+      abort('Error: --length option cannot be greater than 32') if options[:length] > 32
     end
   end
 end

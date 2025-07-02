@@ -32,4 +32,8 @@ class TestEncry < Minitest::Test
 
     assert { password_by_options(['test', '--quiet', '--env', 'TEST_ENCRY_ENV']) == '6eQpk0_vaGn2dkjI' }
   end
+
+  def test_fail_with_length_option
+    #assert { password_by_options(['test', '--main', 'secret', '--quiet', '-l', '6']) == '6eQpk0' }
+  end
 end
